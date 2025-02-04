@@ -1,17 +1,27 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+/********************************************************************************* * BTI425 – Assignment 3
+ * * I declare that this assignment is my own work in accordance with Seneca's
+ * Academic Integrity Policy:
+ *
+ * https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+ *
+ * Name: Leonardo de la Mora Caceres Student ID: 152877205 Date: Feb-5-2025
+ *
+ ********************************************************************************/
+
+import Head from 'next/head'
+import Image from 'next/image'
+import { Geist, Geist_Mono } from 'next/font/google'
+import styles from '@/styles/Home.module.css'
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
 
 export default function Home() {
   return (
@@ -113,5 +123,5 @@ export default function Home() {
         </footer>
       </div>
     </>
-  );
+  )
 }
