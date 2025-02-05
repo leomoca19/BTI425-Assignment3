@@ -15,8 +15,7 @@ import { useState, useEffect } from 'react'
 import { Pagination, Accordion } from 'react-bootstrap'
 import ListingDetails from '@/components/ListingDetails'
 import PageHeader from '@/components/PageHeader'
-
-const domain = 'https://listings-api-eight.vercel.app'
+import { domain } from '@/path'
 
 export default function Home() {
   const [page, setPage] = useState(1)
@@ -47,7 +46,7 @@ export default function Home() {
         {pageData.map((listing) => (
           <Accordion.Item eventKey={listing._id} key={listing._id}>
             <Accordion.Header>
-              <strong>{listing.name}</strong> {listing.address.street}
+              <strong>{listing.name}</strong>&nbsp; {listing.address.street}
             </Accordion.Header>
             <Accordion.Body>
               <ListingDetails listing={listing} />

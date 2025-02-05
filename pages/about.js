@@ -2,8 +2,9 @@ import Link from 'next/link'
 import Card from 'react-bootstrap/Card'
 import ListingDetails from '@/components/ListingDetails'
 import PageHeader from '@/components/PageHeader'
+import { domain } from '@/path'
 
-const url = 'https://listings-api-eight.vercel.app/api/listings/1206363'
+const url = `${domain}/api/listings/1206363`
 
 export async function getStaticProps() {
   const data = await fetch(url).then((res) => res.json())
